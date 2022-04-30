@@ -1,0 +1,21 @@
+::ng-deep .dialog_wrapper {
+    mat-dialog-container {
+        max-width: 50%;
+    }
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .dialog_content {
+        display: flex;
+        gap: 1rem;
+        img {
+            max-width: 20%;
+            object-fit: contain;
+        }
+    }
+    .map-container {
+        width: 30vw;
+        height: 40vh;
+    }
+}
+

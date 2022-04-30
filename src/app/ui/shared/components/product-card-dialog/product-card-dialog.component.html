@@ -1,0 +1,14 @@
+<div class="dialog_wrapper">
+  <h1 mat-dialog-title>{{data.title}}</h1>
+  <div class="dialog_content">
+    <img src="{{data.image}}" alt="{{data.title}}">
+    <p>{{data.description}}</p>
+  </div>
+  <div><p class="product_price">{{data.price}}</p></div>
+  <div class="map-container">
+    <ya-map [center]="[55.751952, 37.600739]" [zoom]="12" [state]="{ controls: [] }">
+      <ya-placemark [geometry]="[55.751952, 37.600739]" (yaclick)="onPointClick($event)"></ya-placemark>
+    </ya-map>
+  </div>
+</div>
+
