@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from './product-card.component';
 import { ProductCardDialogModule } from '../product-card-dialog/product-card-dialog.module';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -13,7 +14,8 @@ import { MatDialogModule } from '@angular/material/dialog';
   imports: [
     CommonModule, 
     MatDialogModule,
-    ProductCardDialogModule
+    ProductCardDialogModule,
+    MatCardModule
   ],
   exports: [
     ProductCardComponent

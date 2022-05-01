@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewInit {
   public page: number = 1
   public products: Product[] = [];
   public throttle: number = 300;
-  public scrollDistance: number = 1;
+  public scrollDistance: number = 0.5;
   public isLoading: boolean = false
 
   constructor(
@@ -33,10 +33,14 @@ export class AppComponent implements AfterViewInit {
       this.isLoading = true
       setTimeout(() => {
         this.products = [...this.products, ...products];
-      }, 2000);
-    });
-    this.isLoading = false
-    console.log(this.products)
+        this.isLoading = false
+      }, 3000);
+      if(products.length === 0) {
+        this.isLoading = false
+      }
+    })
+    
+    
     this.page += 1 
   }
 }

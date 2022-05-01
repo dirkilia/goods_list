@@ -6,5 +6,7 @@
   [infiniteScrollDistance]="scrollDistance"
 >
   <app-product-card *ngFor="let i of products" [product]="i"></app-product-card>
-  <div *ngIf="isLoading"><h1>ГРУЗИТСЯ...</h1></div>
+  <div *ngIf="isLoading" class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
 </div>

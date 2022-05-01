@@ -1,8 +1,9 @@
-<div class="card_wrapper" (click)="openProductCard()">
-    <img [attr.src]="product.image" alt="product_photo">
-    <p class="product_title">{{product.title}}</p>
-    <div class="price_rating">
-        <p class="product_price">{{product.price}}</p>
-        <p class="product_rating">{{product.rating.rate}}</p>
-    </div>
-</div>
+<mat-card class="card_wrapper" (click)="openProductCard()">
+    <img [attr.src]="product.image" mat-card-sm-image alt="product_photo">
+    <mat-card-title class="product_title">{{product.title}}</mat-card-title>
+    <mat-card-content class="price_rating">
+        <p class="product_price"><b>Цена:</b> {{product.price}} $</p>
+        <p class="product_rating"><b>Рейтинг:</b> {{product.rating.rate}}</p>
+    </mat-card-content>
+</mat-card>
+
