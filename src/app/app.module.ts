@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { ProductCardModule } from './ui/shared/components/product-card/product-card.module';
 import { API_SERVER_PATH } from './ui/shared/tokens';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductCardModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
+    ReactiveFormsModule,
+    FormsModule,
+    InfiniteScrollModule
   ],
   providers: [
     {
       provide: API_SERVER_PATH,
-      useValue: "https://fakestoreapi.com"
+      useValue: "http://localhost:3000"
     },
   ],
   bootstrap: [AppComponent]

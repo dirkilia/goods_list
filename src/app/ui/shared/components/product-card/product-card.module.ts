@@ -12,7 +12,8 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   imports: [
     CommonModule, 
-    MatDialogModule
+    MatDialogModule,
+    ProductCardDialogModule
   ],
   exports: [
     ProductCardComponent

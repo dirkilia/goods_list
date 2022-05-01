@@ -1,14 +1,21 @@
 <div class="dialog_wrapper">
-  <h1 mat-dialog-title>{{data.title}}</h1>
+  <h1 mat-dialog-title>{{ data.title }}</h1>
   <div class="dialog_content">
-    <img src="{{data.image}}" alt="{{data.title}}">
-    <p>{{data.description}}</p>
+    <img src="{{ data.image }}" alt="{{ data.title }}" />
+    <p>{{ data.description }}</p>
   </div>
-  <div><p class="product_price">{{data.price}}</p></div>
+  <div>
+    <p class="product_price">{{ data.price }}</p>
+  </div>
   <div class="map-container">
-    <ya-map [center]="[55.751952, 37.600739]" [zoom]="12" [state]="{ controls: [] }">
-      <ya-placemark [geometry]="[55.751952, 37.600739]" (yaclick)="onPointClick($event)"></ya-placemark>
+    <ya-map [center]="[centerMoscow.longitude, centerMoscow.latitude]" [zoom]="10" [state]="{ controls: [] }">
+      <ya-clusterer>
+        <ya-placemark
+        *ngFor="let point of mapPointsArray"
+        [geometry]="[point.longitude, point.latitude]"
+        (yaclick)="onPointClick($event)"
+      ></ya-placemark>
+      </ya-clusterer>
     </ya-map>
   </div>
 </div>
-

@@ -27,9 +27,8 @@ export class ProductsService {
   //   return firstValueFrom(this.httpClient.get<Place>(`${ this.apiServerPath }/places/${ id }`))
   // }
 
-  public readAll(): Promise<Products> {
-  
-    return firstValueFrom(this.httpClient.get<Products>(`${ this.apiServerPath }/products`))
+  public readAll(page: number): Promise<Products> {
+    return firstValueFrom(this.httpClient.get<Products>(`${ this.apiServerPath }/products?_page=${page}&_limit=50`))
   }
 
 }
