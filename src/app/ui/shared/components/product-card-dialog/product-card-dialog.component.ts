@@ -34,20 +34,9 @@ export class ProductCardDialogComponent implements OnInit {
     }
     return placemarksArray
   }
+  
   public onPointClick(e: YaEvent):void {
-    this.dialog.open(FormDialogComponent, {
-      data: {
-        id: '1',
-        title: '1',
-        price: 100,
-        rating: {
-            rate: 100,
-            count: 100
-        },
-        image: '1',
-        description: '1'
-      }
-    })
+    this.dialog.open(FormDialogComponent)
   }
   ngOnInit(): void {
     
