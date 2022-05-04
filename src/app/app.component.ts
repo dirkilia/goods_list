@@ -37,7 +37,7 @@ export class AppComponent implements AfterViewInit {
       setTimeout(() => {
         this.products = [...this.products, ...products];
         this.isLoading = false
-      }, 3000);
+      }, 2000);
       if(products.length === 0) {
         this.isLoading = false
       }

@@ -30,7 +30,6 @@ export class ProductsService {
   }
 
   public post(user: UserData): Promise<UserData> {
-    console.log(JSON.stringify(user), `${ this.apiServerPath }/users`)
     return firstValueFrom(this.httpClient.post<UserData>(`${ this.apiServerPath }/users`, JSON.stringify(user), {
       'headers': {
         'Content-Type': 'application/json'
