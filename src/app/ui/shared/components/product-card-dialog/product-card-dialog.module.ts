@@ -9,7 +9,7 @@ import { FormDialogModule } from '../form-dialog/form-dialog.module';
 
 const mapConfig: YaConfig = {
   apikey: '964d024b-4a1e-4ee6-8b0e-8040e5c1fba6',
-  lang: 'en_US',
+  lang: 'ru_RU',
 };
 
 @NgModule({
