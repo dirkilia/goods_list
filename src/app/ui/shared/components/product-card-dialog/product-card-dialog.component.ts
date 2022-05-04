@@ -21,7 +21,7 @@ export class ProductCardDialogComponent implements OnInit {
   ) {
     
   }
-
+  
   public centerMoscow: Coordinates = centerMoscow;
   public radiusMoscow: number = radiusMoscow
   public mapPointsArray: Array<Coordinates> = this.generatePlacemarkCoordinates(centerMoscow, radiusMoscow)
@@ -35,7 +35,6 @@ export class ProductCardDialogComponent implements OnInit {
     return placemarksArray
   }
   public onPointClick(e: YaEvent):void {
-    const { target, event } = e;
     this.dialog.open(FormDialogComponent, {
       data: {
         id: '1',
@@ -47,13 +46,9 @@ export class ProductCardDialogComponent implements OnInit {
         },
         image: '1',
         description: '1'
-      },
+      }
     })
   }
-
-
-
-
   ngOnInit(): void {
     
   }

@@ -1,35 +1,50 @@
 <form class="form-container" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-    <label for="first-name">Имя</label>
-    <input id="first-name" type="text" formControlName="firstName" autocomplete="off">
+    
+    <div class="field">
+        <label for="first-name">Имя</label>
+        <input id="first-name" type="text" formControlName="firstName" autocomplete="off" placeholder="Иван">
+    </div>
+    
     
     <div class="warning" *ngIf="profileForm.get('firstName')?.invalid && (profileForm.get('firstName')?.dirty || profileForm.get('firstName')?.touched)">
         Введите имя
     </div>
-  
-    <label for="last-name">Фамилия</label>
-    <input id="last-name" type="text" formControlName="lastName" autocomplete="off">
-
+    
+    <div class="field">
+        <label for="last-name">Фамилия</label>
+        <input id="last-name" type="text" formControlName="lastName" autocomplete="off" placeholder="Иванов">
+    </div>
+    
     <div class="warning" *ngIf="profileForm.get('lastName')?.invalid && (profileForm.get('lastName')?.dirty || profileForm.get('lastName')?.touched)">
         Введите фамилию
     </div>
 
-    <label for="first-name">Отчество</label>
-    <input id="first-name" type="text" formControlName="middleName" autocomplete="off">
+    <div class="field">
+        <label for="middleName">Отчество</label>
+        <input id="middleName" type="text" formControlName="middleName" autocomplete="off" placeholder="Иванович">
+    </div>
   
-    <label for="last-name">Почта</label>
-    <input id="last-name" type="text" formControlName="email" autocomplete="off">
+    <div class="field">
+        <label for="email">Почта</label>
+        <input id="email" type="text" formControlName="email" autocomplete="off" placeholder="ivan@gmail.com">
+    </div>
 
     <div class="warning" *ngIf="profileForm.get('email')?.invalid && (profileForm.get('email')?.dirty || profileForm.get('email')?.touched)">
         Введите электронную почту
     </div>
 
-    <label for="first-name">Мобильный телефон</label>
-    <input id="first-name" type="text" formControlName="phone" autocomplete="off">
+    <div class="field">
+        <label for="phone">Мобильный телефон</label>
+        <input id="phone" type="tel" formControlName="phone" autocomplete="off" placeholder="79999999999">
+    </div>
+
     <div class="warning" *ngIf="profileForm.get('phone')?.invalid && (profileForm.get('phone')?.dirty)">
         Введите телефон
     </div>
   
     <p>Заполните поля, чтобы отправить форму</p>
-    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    <button class="submit" type="submit" [disabled]="!profileForm.valid">Отправить</button>
+
+    <div class="close_button"></div>
 </form>
 

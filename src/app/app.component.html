@@ -7,6 +7,6 @@
 >
   <app-product-card *ngFor="let i of products" [product]="i"></app-product-card>
   <div *ngIf="isLoading" class="spinner">
-    <mat-spinner></mat-spinner>
+    <mat-spinner [diameter]="50"></mat-spinner>
   </div>
 </div>

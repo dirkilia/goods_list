@@ -1,15 +1,16 @@
 .cards_container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     row-gap:  50px;
     margin: 0 auto;
+    justify-items: center;
     min-height: 100%;
     margin-top: 5rem;
     max-width: 80%;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     .spinner {
         position: fixed;
-        top: 3vh;
-        right: 3vw;
+        bottom: 1vh;
+        left: 1vw;
     }
 }

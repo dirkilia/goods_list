@@ -4,8 +4,8 @@
     <img src="{{ data.image }}" alt="{{ data.title }}" />
     <p>{{ data.description }}</p>
   </div>
-  <div>
-    <p class="product_price">{{ data.price }}</p>
+  <div class="product_price">
+    <p><b>Цена:</b> {{data.price}} $</p>
   </div>
   <div class="map-container">
     <ya-map [center]="[centerMoscow.longitude, centerMoscow.latitude]" [zoom]="10" [state]="{ controls: [] }">

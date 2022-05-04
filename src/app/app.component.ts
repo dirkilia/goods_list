@@ -21,6 +21,9 @@ export class AppComponent implements AfterViewInit {
   
 
   public ngAfterViewInit(): void {
+
+    window.history.scrollRestoration = 'manual'
+
     this.productsService.readAll(this.page).then((products: any) => {
       this.products = products;
     });
